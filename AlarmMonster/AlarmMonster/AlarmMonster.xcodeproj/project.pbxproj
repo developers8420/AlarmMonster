@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAD1BDB4CB200076813 /* AppDelegate.swift */; };
+		BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAF1BDB4CB200076813 /* AlarmMonster.xcdatamodeld */; };
+		BD944BB31BDB4CB200076813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BB21BDB4CB200076813 /* ViewController.swift */; };
+		BD944BB61BDB4CB200076813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB41BDB4CB200076813 /* Main.storyboard */; };
+		BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB71BDB4CB200076813 /* Images.xcassets */; };
+		BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB91BDB4CB200076813 /* LaunchScreen.xib */; };
+		BD944BC71BDB4CB200076813 /* AlarmMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BC61BDB4CB200076813 /* AlarmMonsterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD944BC11BDB4CB200076813 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD944BA01BDB4CB200076813 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD944BA71BDB4CB200076813;
+			remoteInfo = AlarmMonster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD944BA81BDB4CB200076813 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD944BAC1BDB4CB200076813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD944BAD1BDB4CB200076813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD944BB01BDB4CB200076813 /* AlarmMonster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlarmMonster.xcdatamodel; sourceTree = "<group>"; };
+		BD944BB21BDB4CB200076813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD944BB51BDB4CB200076813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD944BB71BDB4CB200076813 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BD944BBA1BDB4CB200076813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BD944BC01BDB4CB200076813 /* AlarmMonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmMonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD944BC51BDB4CB200076813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD944BC61BDB4CB200076813 /* AlarmMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmMonsterTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD944BA51BDB4CB200076813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD944BBD1BDB4CB200076813 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD944B9F1BDB4CB200076813 = {
+			isa = PBXGroup;
+			children = (
+				BD944BAA1BDB4CB200076813 /* AlarmMonster */,
+				BD944BC31BDB4CB200076813 /* AlarmMonsterTests */,
+				BD944BA91BDB4CB200076813 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD944BA91BDB4CB200076813 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD944BA81BDB4CB200076813 /* AlarmMonster.app */,
+				BD944BC01BDB4CB200076813 /* AlarmMonsterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD944BAA1BDB4CB200076813 /* AlarmMonster */ = {
+			isa = PBXGroup;
+			children = (
+				BD944BAD1BDB4CB200076813 /* AppDelegate.swift */,
+				BD944BB21BDB4CB200076813 /* ViewController.swift */,
+				BD944BB41BDB4CB200076813 /* Main.storyboard */,
+				BD944BB71BDB4CB200076813 /* Images.xcassets */,
+				BD944BB91BDB4CB200076813 /* LaunchScreen.xib */,
+				BD944BAF1BDB4CB200076813 /* AlarmMonster.xcdatamodeld */,
+				BD944BAB1BDB4CB200076813 /* Supporting Files */,
+			);
+			path = AlarmMonster;
+			sourceTree = "<group>";
+		};
+		BD944BAB1BDB4CB200076813 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD944BAC1BDB4CB200076813 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD944BC31BDB4CB200076813 /* AlarmMonsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD944BC61BDB4CB200076813 /* AlarmMonsterTests.swift */,
+				BD944BC41BDB4CB200076813 /* Supporting Files */,
+			);
+			path = AlarmMonsterTests;
+			sourceTree = "<group>";
+		};
+		BD944BC41BDB4CB200076813 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD944BC51BDB4CB200076813 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD944BA71BDB4CB200076813 /* AlarmMonster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD944BCA1BDB4CB200076813 /* Build configuration list for PBXNativeTarget "AlarmMonster" */;
+			buildPhases = (
+				BD944BA41BDB4CB200076813 /* Sources */,
+				BD944BA51BDB4CB200076813 /* Frameworks */,
+				BD944BA61BDB4CB200076813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlarmMonster;
+			productName = AlarmMonster;
+			productReference = BD944BA81BDB4CB200076813 /* AlarmMonster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD944BBF1BDB4CB200076813 /* AlarmMonsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD944BCD1BDB4CB200076813 /* Build configuration list for PBXNativeTarget "AlarmMonsterTests" */;
+			buildPhases = (
+				BD944BBC1BDB4CB200076813 /* Sources */,
+				BD944BBD1BDB4CB200076813 /* Frameworks */,
+				BD944BBE1BDB4CB200076813 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD944BC21BDB4CB200076813 /* PBXTargetDependency */,
+			);
+			name = AlarmMonsterTests;
+			productName = AlarmMonsterTests;
+			productReference = BD944BC01BDB4CB200076813 /* AlarmMonsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD944BA01BDB4CB200076813 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Shun Uehara";
+				TargetAttributes = {
+					BD944BA71BDB4CB200076813 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					BD944BBF1BDB4CB200076813 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = BD944BA71BDB4CB200076813;
+					};
+				};
+			};
+			buildConfigurationList = BD944BA31BDB4CB200076813 /* Build configuration list for PBXProject "AlarmMonster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD944B9F1BDB4CB200076813;
+			productRefGroup = BD944BA91BDB4CB200076813 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD944BA71BDB4CB200076813 /* AlarmMonster */,
+				BD944BBF1BDB4CB200076813 /* AlarmMonsterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD944BA61BDB4CB200076813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD944BB61BDB4CB200076813 /* Main.storyboard in Resources */,
+				BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */,
+				BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD944BBE1BDB4CB200076813 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD944BA41BDB4CB200076813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD944BB31BDB4CB200076813 /* ViewController.swift in Sources */,
+				BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */,
+				BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD944BBC1BDB4CB200076813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD944BC71BDB4CB200076813 /* AlarmMonsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD944BC21BDB4CB200076813 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD944BA71BDB4CB200076813 /* AlarmMonster */;
+			targetProxy = BD944BC11BDB4CB200076813 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD944BB41BDB4CB200076813 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD944BB51BDB4CB200076813 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD944BB91BDB4CB200076813 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD944BBA1BDB4CB200076813 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD944BC81BDB4CB200076813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD944BC91BDB4CB200076813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD944BCB1BDB4CB200076813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlarmMonster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD944BCC1BDB4CB200076813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlarmMonster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD944BCE1BDB4CB200076813 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlarmMonsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlarmMonster.app/AlarmMonster";
+			};
+			name = Debug;
+		};
+		BD944BCF1BDB4CB200076813 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlarmMonsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlarmMonster.app/AlarmMonster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD944BA31BDB4CB200076813 /* Build configuration list for PBXProject "AlarmMonster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD944BC81BDB4CB200076813 /* Debug */,
+				BD944BC91BDB4CB200076813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD944BCA1BDB4CB200076813 /* Build configuration list for PBXNativeTarget "AlarmMonster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD944BCB1BDB4CB200076813 /* Debug */,
+				BD944BCC1BDB4CB200076813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD944BCD1BDB4CB200076813 /* Build configuration list for PBXNativeTarget "AlarmMonsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD944BCE1BDB4CB200076813 /* Debug */,
+				BD944BCF1BDB4CB200076813 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD944BAF1BDB4CB200076813 /* AlarmMonster.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD944BB01BDB4CB200076813 /* AlarmMonster.xcdatamodel */,
+			);
+			currentVersion = BD944BB01BDB4CB200076813 /* AlarmMonster.xcdatamodel */;
+			path = AlarmMonster.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BD944BA01BDB4CB200076813 /* Project object */;
+}
