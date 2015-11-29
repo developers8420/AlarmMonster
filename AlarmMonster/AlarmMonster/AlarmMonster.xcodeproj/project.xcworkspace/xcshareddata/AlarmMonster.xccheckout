@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C4FAE680-741B-4934-8F1E-6B306DAAD2B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AlarmMonster</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>736DDC6D9BBAD0B80E6ECFAA5D130CFE6091121B</key>
+		<string>https://github.com/developers8420/AlarmMonster.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AlarmMonster/AlarmMonster/AlarmMonster.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>736DDC6D9BBAD0B80E6ECFAA5D130CFE6091121B</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/developers8420/AlarmMonster.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>736DDC6D9BBAD0B80E6ECFAA5D130CFE6091121B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>736DDC6D9BBAD0B80E6ECFAA5D130CFE6091121B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AlarmMonster</string>
+		</dict>
+	</array>
+</dict>
+</plist>

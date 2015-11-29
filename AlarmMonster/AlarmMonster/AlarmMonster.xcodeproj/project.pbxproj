@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640DE1CB1BDB60860084A7CF /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */; };
+		6442CB531C0B2D400029D3D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442CB521C0B2D400029D3D6 /* HomeViewController.swift */; };
+		645A77691BED8570009C3797 /* GraveListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */; };
+		645A776B1BED8683009C3797 /* GraveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A776A1BED8683009C3797 /* GraveListViewController.swift */; };
+		645A776D1BED9131009C3797 /* にわとりさん.png in Resources */ = {isa = PBXBuildFile; fileRef = 645A776C1BED9131009C3797 /* にわとりさん.png */; };
 		BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAD1BDB4CB200076813 /* AppDelegate.swift */; };
 		BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAF1BDB4CB200076813 /* AlarmMonster.xcdatamodeld */; };
-		BD944BB31BDB4CB200076813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BB21BDB4CB200076813 /* ViewController.swift */; };
 		BD944BB61BDB4CB200076813 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB41BDB4CB200076813 /* Main.storyboard */; };
 		BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB71BDB4CB200076813 /* Images.xcassets */; };
 		BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB91BDB4CB200076813 /* LaunchScreen.xib */; };
@@ -27,11 +31,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationViewController.swift; sourceTree = "<group>"; };
+		6442CB521C0B2D400029D3D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraveListCollectionViewCell.swift; sourceTree = "<group>"; };
+		645A776A1BED8683009C3797 /* GraveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraveListViewController.swift; sourceTree = "<group>"; };
+		645A776C1BED9131009C3797 /* にわとりさん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "にわとりさん.png"; sourceTree = "<group>"; };
 		BD944BA81BDB4CB200076813 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD944BAC1BDB4CB200076813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD944BAD1BDB4CB200076813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD944BB01BDB4CB200076813 /* AlarmMonster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AlarmMonster.xcdatamodel; sourceTree = "<group>"; };
-		BD944BB21BDB4CB200076813 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD944BB51BDB4CB200076813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD944BB71BDB4CB200076813 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD944BBA1BDB4CB200076813 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				BD944BAD1BDB4CB200076813 /* AppDelegate.swift */,
-				BD944BB21BDB4CB200076813 /* ViewController.swift */,
+				640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */,
+				6442CB521C0B2D400029D3D6 /* HomeViewController.swift */,
+				645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */,
+				645A776A1BED8683009C3797 /* GraveListViewController.swift */,
 				BD944BB41BDB4CB200076813 /* Main.storyboard */,
 				BD944BB71BDB4CB200076813 /* Images.xcassets */,
 				BD944BB91BDB4CB200076813 /* LaunchScreen.xib */,
@@ -93,6 +104,7 @@
 		BD944BAB1BDB4CB200076813 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				645A776C1BED9131009C3797 /* にわとりさん.png */,
 				BD944BAC1BDB4CB200076813 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -159,6 +171,8 @@
 		BD944BA01BDB4CB200076813 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Shun Uehara";
 				TargetAttributes = {
@@ -196,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD944BB61BDB4CB200076813 /* Main.storyboard in Resources */,
+				645A776D1BED9131009C3797 /* にわとりさん.png in Resources */,
 				BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */,
 				BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */,
 			);
@@ -215,9 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD944BB31BDB4CB200076813 /* ViewController.swift in Sources */,
+				645A77691BED8570009C3797 /* GraveListCollectionViewCell.swift in Sources */,
 				BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */,
 				BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */,
+				640DE1CB1BDB60860084A7CF /* FoundationViewController.swift in Sources */,
+				645A776B1BED8683009C3797 /* GraveListViewController.swift in Sources */,
+				6442CB531C0B2D400029D3D6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +431,7 @@
 				BD944BCC1BDB4CB200076813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD944BCD1BDB4CB200076813 /* Build configuration list for PBXNativeTarget "AlarmMonsterTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +440,7 @@
 				BD944BCF1BDB4CB200076813 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
