@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -37,41 +38,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-x7-FSA" userLabel="MainView">
-                                <rect key="frame" x="50" y="50" width="500" height="371"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hh-x7-FSA" userLabel="MainView">
+                                <rect key="frame" x="50" y="50" width="500" height="355"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-K0-KmU" userLabel="MonsterImage">
-                                        <rect key="frame" x="200" y="136" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-K0-KmU" userLabel="MonsterImage">
+                                        <rect key="frame" x="200" y="134" width="100" height="100"/>
                                         <animations/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="MG8-Sf-PO7"/>
-                                            <constraint firstAttribute="height" constant="100" id="S7F-9k-gZs"/>
+                                            <constraint firstAttribute="width" secondItem="Ne4-K0-KmU" secondAttribute="height" multiplier="1:1" id="1Yc-PF-dBG"/>
+                                            <constraint firstAttribute="width" constant="100" id="bFw-OK-Aur"/>
+                                            <constraint firstAttribute="height" constant="100" id="vd5-qd-8vk"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="Ne4-K0-KmU" firstAttribute="centerY" secondItem="6hh-x7-FSA" secondAttribute="centerY" id="1kw-yn-Mhv"/>
-                                    <constraint firstItem="Ne4-K0-KmU" firstAttribute="centerX" secondItem="6hh-x7-FSA" secondAttribute="centerX" id="exd-rD-5d0"/>
+                                    <constraint firstItem="Ne4-K0-KmU" firstAttribute="centerX" secondItem="6hh-x7-FSA" secondAttribute="centerX" id="E0E-M2-NNx"/>
+                                    <constraint firstItem="Ne4-K0-KmU" firstAttribute="centerY" secondItem="6hh-x7-FSA" secondAttribute="centerY" constant="6.5" id="tgs-ry-zE2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-fi-Oss" userLabel="TimerView">
-                                <rect key="frame" x="50" y="471" width="500" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-fi-Oss" userLabel="TimerView">
+                                <rect key="frame" x="50" y="435" width="500" height="86"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f2h-fi-Oss" secondAttribute="height" multiplier="250:43" id="tIv-a9-sZS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6hh-x7-FSA" firstAttribute="top" secondItem="1BF-fi-a4n" secondAttribute="bottom" constant="30" id="21m-XI-EqA"/>
-                            <constraint firstItem="f2h-fi-Oss" firstAttribute="top" secondItem="6hh-x7-FSA" secondAttribute="bottom" constant="50" id="H4R-pR-piW"/>
-                            <constraint firstItem="f2h-fi-Oss" firstAttribute="centerX" secondItem="JK2-79-2N3" secondAttribute="centerX" id="Q5X-d4-Ydf"/>
-                            <constraint firstItem="6hh-x7-FSA" firstAttribute="leading" secondItem="f2h-fi-Oss" secondAttribute="leading" id="ZFb-PC-W66"/>
-                            <constraint firstItem="6hh-x7-FSA" firstAttribute="trailing" secondItem="f2h-fi-Oss" secondAttribute="trailing" id="bAU-6L-3gL"/>
-                            <constraint firstItem="6hh-x7-FSA" firstAttribute="leading" secondItem="JK2-79-2N3" secondAttribute="leadingMargin" constant="30" id="vb5-Gm-RRa"/>
-                            <constraint firstItem="sPG-4u-BGb" firstAttribute="top" secondItem="f2h-fi-Oss" secondAttribute="bottom" constant="30" id="xoi-wa-car"/>
+                            <constraint firstItem="f2h-fi-Oss" firstAttribute="top" secondItem="6hh-x7-FSA" secondAttribute="bottom" constant="30" id="4ls-9e-Z8s"/>
+                            <constraint firstItem="6hh-x7-FSA" firstAttribute="leading" secondItem="JK2-79-2N3" secondAttribute="leadingMargin" constant="30" id="4qY-Bb-BBF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f2h-fi-Oss" secondAttribute="trailing" constant="30" id="5LY-eP-de7"/>
+                            <constraint firstItem="sPG-4u-BGb" firstAttribute="top" secondItem="f2h-fi-Oss" secondAttribute="bottom" constant="30" id="KcC-hc-XiN"/>
+                            <constraint firstItem="6hh-x7-FSA" firstAttribute="top" secondItem="1BF-fi-a4n" secondAttribute="bottom" constant="30" id="gbW-5U-UGq"/>
+                            <constraint firstItem="f2h-fi-Oss" firstAttribute="leading" secondItem="JK2-79-2N3" secondAttribute="leadingMargin" constant="30" id="mVi-gS-8XE"/>
+                            <constraint firstItem="f2h-fi-Oss" firstAttribute="width" secondItem="6hh-x7-FSA" secondAttribute="width" id="rXs-mo-5qk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" id="nnp-NS-R4N"/>
