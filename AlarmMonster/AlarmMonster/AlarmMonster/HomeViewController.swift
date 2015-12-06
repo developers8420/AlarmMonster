@@ -14,7 +14,7 @@ class HomeViewController: FoundationViewController {
     @IBOutlet weak var borderMainView: UIView!
     @IBOutlet weak var borderSubView: UIView!
     
-    //@IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var characterImageView: UIImageView!
     
     
     override func viewDidLoad() {
@@ -34,10 +34,11 @@ class HomeViewController: FoundationViewController {
         borderSubView.layer.borderWidth = 1
         
         //キャラクター表示(仮)
-        //characterImageView.image = UIImage(named: "にわとりさん.png")
-        
+        characterImageView.image = UIImage(named: "わたあめ.png")
+        characterImageView.backgroundColor = UIColor.lightGrayColor()
         
         //タイマー
+        // タッチしたら・・・
     }
     
     override func didReceiveMemoryWarning() {

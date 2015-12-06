@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		640DE1CB1BDB60860084A7CF /* FoundationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */; };
 		6442CB531C0B2D400029D3D6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6442CB521C0B2D400029D3D6 /* HomeViewController.swift */; };
-		645A77691BED8570009C3797 /* GraveListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */; };
-		645A776B1BED8683009C3797 /* GraveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645A776A1BED8683009C3797 /* GraveListViewController.swift */; };
 		645A776D1BED9131009C3797 /* にわとりさん.png in Resources */ = {isa = PBXBuildFile; fileRef = 645A776C1BED9131009C3797 /* にわとりさん.png */; };
 		BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAD1BDB4CB200076813 /* AppDelegate.swift */; };
 		BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD944BAF1BDB4CB200076813 /* AlarmMonster.xcdatamodeld */; };
@@ -18,7 +16,23 @@
 		BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB71BDB4CB200076813 /* Images.xcassets */; };
 		BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD944BB91BDB4CB200076813 /* LaunchScreen.xib */; };
 		BD944BC71BDB4CB200076813 /* AlarmMonsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD944BC61BDB4CB200076813 /* AlarmMonsterTests.swift */; };
+		BDADB4AF1C0DD75900030DE0 /* わたあめ.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADB4AC1C0DD75900030DE0 /* わたあめ.png */; };
+		BDADB4B01C0DD75900030DE0 /* 横向き1.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADB4AD1C0DD75900030DE0 /* 横向き1.png */; };
+		BDADB4B11C0DD75900030DE0 /* 横向き2.png in Resources */ = {isa = PBXBuildFile; fileRef = BDADB4AE1C0DD75900030DE0 /* 横向き2.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		BDADB4B21C0DDB1200030DE0 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.skatlas;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/myfile",
+			);
+			script = "# TextureAtlas\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		BD944BC11BDB4CB200076813 /* PBXContainerItemProxy */ = {
@@ -33,8 +47,6 @@
 /* Begin PBXFileReference section */
 		640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationViewController.swift; sourceTree = "<group>"; };
 		6442CB521C0B2D400029D3D6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraveListCollectionViewCell.swift; sourceTree = "<group>"; };
-		645A776A1BED8683009C3797 /* GraveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraveListViewController.swift; sourceTree = "<group>"; };
 		645A776C1BED9131009C3797 /* にわとりさん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "にわとりさん.png"; sourceTree = "<group>"; };
 		BD944BA81BDB4CB200076813 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD944BAC1BDB4CB200076813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +58,9 @@
 		BD944BC01BDB4CB200076813 /* AlarmMonsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarmMonsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD944BC51BDB4CB200076813 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD944BC61BDB4CB200076813 /* AlarmMonsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmMonsterTests.swift; sourceTree = "<group>"; };
+		BDADB4AC1C0DD75900030DE0 /* わたあめ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "わたあめ.png"; sourceTree = "<group>"; };
+		BDADB4AD1C0DD75900030DE0 /* 横向き1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "横向き1.png"; sourceTree = "<group>"; };
+		BDADB4AE1C0DD75900030DE0 /* 横向き2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "横向き2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +105,6 @@
 				BD944BAD1BDB4CB200076813 /* AppDelegate.swift */,
 				640DE1CA1BDB60860084A7CF /* FoundationViewController.swift */,
 				6442CB521C0B2D400029D3D6 /* HomeViewController.swift */,
-				645A77681BED8570009C3797 /* GraveListCollectionViewCell.swift */,
-				645A776A1BED8683009C3797 /* GraveListViewController.swift */,
 				BD944BB41BDB4CB200076813 /* Main.storyboard */,
 				BD944BB71BDB4CB200076813 /* Images.xcassets */,
 				BD944BB91BDB4CB200076813 /* LaunchScreen.xib */,
@@ -104,6 +117,9 @@
 		BD944BAB1BDB4CB200076813 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDADB4AC1C0DD75900030DE0 /* わたあめ.png */,
+				BDADB4AD1C0DD75900030DE0 /* 横向き1.png */,
+				BDADB4AE1C0DD75900030DE0 /* 横向き2.png */,
 				645A776C1BED9131009C3797 /* にわとりさん.png */,
 				BD944BAC1BDB4CB200076813 /* Info.plist */,
 			);
@@ -139,6 +155,7 @@
 				BD944BA61BDB4CB200076813 /* Resources */,
 			);
 			buildRules = (
+				BDADB4B21C0DDB1200030DE0 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -211,7 +228,10 @@
 			files = (
 				BD944BB61BDB4CB200076813 /* Main.storyboard in Resources */,
 				645A776D1BED9131009C3797 /* にわとりさん.png in Resources */,
+				BDADB4AF1C0DD75900030DE0 /* わたあめ.png in Resources */,
 				BD944BBB1BDB4CB200076813 /* LaunchScreen.xib in Resources */,
+				BDADB4B01C0DD75900030DE0 /* 横向き1.png in Resources */,
+				BDADB4B11C0DD75900030DE0 /* 横向き2.png in Resources */,
 				BD944BB81BDB4CB200076813 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,11 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645A77691BED8570009C3797 /* GraveListCollectionViewCell.swift in Sources */,
 				BD944BB11BDB4CB200076813 /* AlarmMonster.xcdatamodeld in Sources */,
 				BD944BAE1BDB4CB200076813 /* AppDelegate.swift in Sources */,
 				640DE1CB1BDB60860084A7CF /* FoundationViewController.swift in Sources */,
-				645A776B1BED8683009C3797 /* GraveListViewController.swift in Sources */,
 				6442CB531C0B2D400029D3D6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
