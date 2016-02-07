@@ -8,7 +8,8 @@
 
 #import "FoundationViewController.h"
 #import "OrgButton.h"
+#import "UserDefaultModel.h"
 
 @interface HomeViewController : FoundationViewController
-
+@property UserDefaultModel *model;
 @end

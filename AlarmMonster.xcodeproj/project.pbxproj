@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6458F3301C66FB3E00BB3968 /* LabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F32F1C66FB3E00BB3968 /* LabelFactory.m */; };
+		6458F3331C67000400BB3968 /* SwitchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3321C67000400BB3968 /* SwitchFactory.m */; };
 		64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */; };
 		64A462031C5C6BC400189AD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462021C5C6BC400189AD8 /* main.m */; };
 		64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462051C5C6BC400189AD8 /* AppDelegate.m */; };
@@ -24,6 +26,7 @@
 		64A462451C5C89A400189AD8 /* AlarmSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462441C5C89A400189AD8 /* AlarmSettingViewController.m */; };
 		64A462481C5C8B8B00189AD8 /* MonsterSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462471C5C8B8B00189AD8 /* MonsterSettingViewController.m */; };
 		64A4624E1C5C91A900189AD8 /* ConfiguredTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */; };
+		64E7FF071C5E1A0200E5CC27 /* UserDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6458F32E1C66FB3E00BB3968 /* LabelFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelFactory.h; sourceTree = "<group>"; };
+		6458F32F1C66FB3E00BB3968 /* LabelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFactory.m; sourceTree = "<group>"; };
+		6458F3311C67000400BB3968 /* SwitchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchFactory.h; sourceTree = "<group>"; };
+		6458F3321C67000400BB3968 /* SwitchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchFactory.m; sourceTree = "<group>"; };
 		64A244C31C5C98B0001C85DF /* ConfiguredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredViewController.h; sourceTree = "<group>"; };
 		64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredViewController.m; sourceTree = "<group>"; };
 		64A461FE1C5C6BC400189AD8 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +82,9 @@
 		64A462471C5C8B8B00189AD8 /* MonsterSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterSettingViewController.m; sourceTree = "<group>"; };
 		64A4624C1C5C91A900189AD8 /* ConfiguredTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredTableView.h; sourceTree = "<group>"; };
 		64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredTableView.m; sourceTree = "<group>"; };
+		64E7FF031C5E18E300E5CC27 /* AlarmMonsterDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmMonsterDefine.h; sourceTree = "<group>"; };
+		64E7FF051C5E1A0200E5CC27 /* UserDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultModel.h; sourceTree = "<group>"; };
+		64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +137,9 @@
 			children = (
 				64A462041C5C6BC400189AD8 /* AppDelegate.h */,
 				64A462051C5C6BC400189AD8 /* AppDelegate.m */,
+				64E7FF031C5E18E300E5CC27 /* AlarmMonsterDefine.h */,
 				64A4624A1C5C8BB700189AD8 /* UIparts */,
+				64E7FF041C5E19E800E5CC27 /* Model */,
 				64A4624B1C5C917E00189AD8 /* View */,
 				64A462491C5C8B9200189AD8 /* Controller */,
 				64A4620A1C5C6BC400189AD8 /* Main.storyboard */,
@@ -190,6 +202,10 @@
 			children = (
 				64A4623A1C5C795300189AD8 /* OrgButton.h */,
 				64A4623B1C5C795300189AD8 /* OrgButton.m */,
+				6458F32E1C66FB3E00BB3968 /* LabelFactory.h */,
+				6458F32F1C66FB3E00BB3968 /* LabelFactory.m */,
+				6458F3311C67000400BB3968 /* SwitchFactory.h */,
+				6458F3321C67000400BB3968 /* SwitchFactory.m */,
 			);
 			name = UIparts;
 			sourceTree = "<group>";
@@ -201,6 +217,15 @@
 				64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		64E7FF041C5E19E800E5CC27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64E7FF051C5E1A0200E5CC27 /* UserDefaultModel.h */,
+				64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,10 +366,13 @@
 				64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */,
 				64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */,
 				64A462481C5C8B8B00189AD8 /* MonsterSettingViewController.m in Sources */,
+				6458F3331C67000400BB3968 /* SwitchFactory.m in Sources */,
+				6458F3301C66FB3E00BB3968 /* LabelFactory.m in Sources */,
 				64A462451C5C89A400189AD8 /* AlarmSettingViewController.m in Sources */,
 				64A462031C5C6BC400189AD8 /* main.m in Sources */,
 				64A462361C5C6C8000189AD8 /* FoundationViewController.m in Sources */,
 				64A4623C1C5C795300189AD8 /* OrgButton.m in Sources */,
+				64E7FF071C5E1A0200E5CC27 /* UserDefaultModel.m in Sources */,
 				64A462391C5C737700189AD8 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

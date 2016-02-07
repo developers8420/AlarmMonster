@@ -12,7 +12,9 @@
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController {
+    UIButton *alarmDispBtn;
+}
 
 #define ALARM_IMG @"めざまし時計アイコン.png"
 #define MONSTER_IMG @"設定アイコン.png"
@@ -20,65 +22,65 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //test code
-//    UILabel *label = [[UILabel alloc] initWithFrame:self.defaultRect];
-//    label.backgroundColor = [UIColor blueColor];
-//    [self.view addSubview:label];
-    
-    UIImage *wataameImg = [UIImage imageNamed:WATAAME_IMG];
-    CGRect wataameImgRect = CGRectMake(self.defaultX, self.defaultY, self.defaultWidth, self.defaultHeight - 70);
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:wataameImgRect];
-    imgView.image = wataameImg;
-    imgView.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:imgView];
-    
-    CGRect alarmLabelRect = CGRectMake(self.defaultX, self.defaultY + wataameImgRect.size.height + 10, self.defaultWidth , 60);
-    
-    UIButton *alarmDispBtn = [OrgButton planeButton:alarmLabelRect text:@"06:30" delegate:self action:@selector(moveConfigured) tag:3];
-    alarmDispBtn.layer.borderWidth = 1.0;
-    alarmDispBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    
-    /*
-    UILabel *alarmLabel = [[UILabel alloc] initWithFrame:alarmLabelRect];
-    alarmLabel.textAlignment = NSTextAlignmentCenter;
-    alarmLabel.text = @"06:30";
-    alarmLabel.layer.borderWidth = 1.0;
-    alarmLabel.layer.borderColor = [UIColor lightGrayColor].CGColor;
-     */
+
+    _model = [[UserDefaultModel alloc] init];
+    self.view.backgroundColor = BACK_COLOR;
+
+    //イメージを乗せるビュー
+    CGRect viewRect = CGRectMake(self.defaultX, self.defaultY, self.defaultWidth, self.defaultHeight - 70);
+    UIView *backView = [[UIView alloc] initWithFrame:viewRect];
+    backView.backgroundColor = DEFAULT_COLOR;
+    [self.view addSubview:backView];
+
+    //モンスターイメージ
+    CGRect monsterImgRect = CGRectMake(viewRect.size.width/3, viewRect.size.height/3, viewRect.size.width/3, viewRect.size.height/3);
+    UIImage *monsterImg = [UIImage imageNamed:WATAAME_IMG];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:monsterImgRect];
+    imgView.image = monsterImg;
+    [backView addSubview:imgView];
+
+    //時間表示
+    CGRect alarmLabelRect = CGRectMake(self.defaultX, self.defaultY + viewRect.size.height + 10, self.defaultWidth , 60);
+    alarmDispBtn = [OrgButton planeButton:alarmLabelRect text:[_model getAlarm:0] delegate:self action:@selector(moveConfigured) tag:3];
+    alarmDispBtn.backgroundColor = DEFAULT_COLOR;
     [self.view addSubview:alarmDispBtn];
-    
+
     //イメージサイズ
     CGRect imgRect = CGRectMake(0, 0, 30,30);
-    
+
     //イメージの設定
-    UIImage *alarmImg = [UIImage imageNamed:ALARM_IMG];
-    UIImage *monsterImg = [UIImage imageNamed:MONSTER_IMG];
-    
+    UIImage *alarmSettingImg = [UIImage imageNamed:ALARM_IMG];
+    UIImage *monsterSettingImg = [UIImage imageNamed:MONSTER_IMG];
+
     //ボタンの作成
     UIButton *alarmBtn = [OrgButton imageButton:imgRect
-                                            img:alarmImg
+                                            img:alarmSettingImg
                                             isHighlighte:YES
-                                            on_img:alarmImg
+                                            on_img:alarmSettingImg
                                             delegate:self
                                             action:@selector(moveAlarmSetting)
                                             tag:1];
-    
+
     UIButton *monsterBtn = [OrgButton imageButton:imgRect
-                                              img:monsterImg
+                                              img:monsterSettingImg
                                      isHighlighte:YES
-                                           on_img:monsterImg
+                                           on_img:monsterSettingImg
                                          delegate:self
                                            action:@selector(moveMonsterSetting)
                                               tag:2];
-    
+
     //バーボタンの作成
     UIBarButtonItem *alarmBarBtn = [[UIBarButtonItem alloc] initWithCustomView:alarmBtn];
     UIBarButtonItem *monsterBarBtn = [[UIBarButtonItem alloc] initWithCustomView:monsterBtn];
-    
+
     //バーボタンの設定
     self.navigationItem.rightBarButtonItem = alarmBarBtn;
     self.navigationItem.leftBarButtonItem = monsterBarBtn;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    _model = [[UserDefaultModel alloc] init];
+    [alarmDispBtn setTitle:[_model getAlarm:0] forState:UIControlStateNormal];
 }
 
 //アラーム設定画面に遷移
@@ -102,11 +104,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue identifier] isEqualToString:@"AlarmSettingSegue"]) {
-        
+            
     } else if ([[segue identifier] isEqualToString:@"MonsterSettingSegue"]){
-        
+
     } else if ([[segue identifier] isEqualToString:@"ConfiguredSegue"]){
-        
+
     }
 }
 

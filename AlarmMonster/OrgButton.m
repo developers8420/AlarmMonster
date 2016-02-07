@@ -23,6 +23,10 @@
     [button sizeToFit];
     button.frame = frame;
     
+    //枠線を設定
+    button.layer.borderWidth = 1.0;
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    
     //画面が変わってもボタンの位置を自動調整
     button.autoresizingMask =
     UIViewAutoresizingFlexibleWidth |

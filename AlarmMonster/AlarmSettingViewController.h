@@ -8,6 +8,8 @@
 
 #import "FoundationViewController.h"
 #import "ConfiguredTableView.h"
+#import "OrgButton.h"
+#import "UserDefaultModel.h"
 
 @interface AlarmSettingViewController : FoundationViewController
 

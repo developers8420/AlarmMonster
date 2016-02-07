@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserDefaultModel.h"
+#import "LabelFactory.h"
+#import "SwitchFactory.h"
 
 @interface ConfiguredTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
-
+@property UserDefaultModel *model;
 @end

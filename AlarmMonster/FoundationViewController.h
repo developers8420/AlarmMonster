@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AlarmMonsterDefine.h"
 
 @interface FoundationViewController : UIViewController
 
