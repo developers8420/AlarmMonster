@@ -20,6 +20,7 @@
         self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.separatorInset = UIEdgeInsetsZero;
         _model = [[UserDefaultModel alloc] init];
+        _helper = [[AlarmDBHelper alloc] init];
         if ([self respondsToSelector:@selector(layoutMargins)]) {
             self.layoutMargins = UIEdgeInsetsZero;
         }

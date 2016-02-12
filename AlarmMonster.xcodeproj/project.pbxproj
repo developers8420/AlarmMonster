@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		6458F3301C66FB3E00BB3968 /* LabelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F32F1C66FB3E00BB3968 /* LabelFactory.m */; };
 		6458F3331C67000400BB3968 /* SwitchFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3321C67000400BB3968 /* SwitchFactory.m */; };
+		6458F3421C670E0500BB3968 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3381C670E0500BB3968 /* FMDatabase.m */; };
+		6458F3431C670E0500BB3968 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F33A1C670E0500BB3968 /* FMDatabaseAdditions.m */; };
+		6458F3441C670E0500BB3968 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F33C1C670E0500BB3968 /* FMDatabasePool.m */; };
+		6458F3451C670E0500BB3968 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F33E1C670E0500BB3968 /* FMDatabaseQueue.m */; };
+		6458F3461C670E0500BB3968 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3411C670E0500BB3968 /* FMResultSet.m */; };
+		6458F3491C670EF500BB3968 /* AlarmDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3481C670EF500BB3968 /* AlarmDBHelper.m */; };
+		6458F34E1C671F4D00BB3968 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
+		6458F3501C6720C900BB3968 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */; };
 		64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */; };
 		64A462031C5C6BC400189AD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462021C5C6BC400189AD8 /* main.m */; };
 		64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462051C5C6BC400189AD8 /* AppDelegate.m */; };
@@ -51,6 +59,20 @@
 		6458F32F1C66FB3E00BB3968 /* LabelFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelFactory.m; sourceTree = "<group>"; };
 		6458F3311C67000400BB3968 /* SwitchFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchFactory.h; sourceTree = "<group>"; };
 		6458F3321C67000400BB3968 /* SwitchFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchFactory.m; sourceTree = "<group>"; };
+		6458F3371C670E0500BB3968 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		6458F3381C670E0500BB3968 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		6458F3391C670E0500BB3968 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		6458F33A1C670E0500BB3968 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		6458F33B1C670E0500BB3968 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		6458F33C1C670E0500BB3968 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		6458F33D1C670E0500BB3968 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		6458F33E1C670E0500BB3968 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6458F3401C670E0500BB3968 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		6458F3411C670E0500BB3968 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		6458F3471C670EF500BB3968 /* AlarmDBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmDBHelper.h; sourceTree = "<group>"; };
+		6458F3481C670EF500BB3968 /* AlarmDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDBHelper.m; sourceTree = "<group>"; };
+		6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		64A244C31C5C98B0001C85DF /* ConfiguredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredViewController.h; sourceTree = "<group>"; };
 		64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredViewController.m; sourceTree = "<group>"; };
 		64A461FE1C5C6BC400189AD8 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6458F3501C6720C900BB3968 /* libsqlite3.0.tbd in Frameworks */,
+				6458F34E1C671F4D00BB3968 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,9 +136,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6458F3361C670DC300BB3968 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				6458F3371C670E0500BB3968 /* FMDatabase.h */,
+				6458F3381C670E0500BB3968 /* FMDatabase.m */,
+				6458F3391C670E0500BB3968 /* FMDatabaseAdditions.h */,
+				6458F33A1C670E0500BB3968 /* FMDatabaseAdditions.m */,
+				6458F33B1C670E0500BB3968 /* FMDatabasePool.h */,
+				6458F33C1C670E0500BB3968 /* FMDatabasePool.m */,
+				6458F33D1C670E0500BB3968 /* FMDatabaseQueue.h */,
+				6458F33E1C670E0500BB3968 /* FMDatabaseQueue.m */,
+				6458F3401C670E0500BB3968 /* FMResultSet.h */,
+				6458F3411C670E0500BB3968 /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
 		64A461F51C5C6BC400189AD8 = {
 			isa = PBXGroup;
 			children = (
+				6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */,
+				6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */,
 				64A462001C5C6BC400189AD8 /* AlarmMonster */,
 				64A4621A1C5C6BC400189AD8 /* AlarmMonsterTests */,
 				64A462251C5C6BC400189AD8 /* AlarmMonsterUITests */,
@@ -138,6 +181,7 @@
 				64A462041C5C6BC400189AD8 /* AppDelegate.h */,
 				64A462051C5C6BC400189AD8 /* AppDelegate.m */,
 				64E7FF031C5E18E300E5CC27 /* AlarmMonsterDefine.h */,
+				6458F3361C670DC300BB3968 /* FMDB */,
 				64A4624A1C5C8BB700189AD8 /* UIparts */,
 				64E7FF041C5E19E800E5CC27 /* Model */,
 				64A4624B1C5C917E00189AD8 /* View */,
@@ -224,6 +268,8 @@
 			children = (
 				64E7FF051C5E1A0200E5CC27 /* UserDefaultModel.h */,
 				64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */,
+				6458F3471C670EF500BB3968 /* AlarmDBHelper.h */,
+				6458F3481C670EF500BB3968 /* AlarmDBHelper.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -364,13 +410,19 @@
 			files = (
 				64A4624E1C5C91A900189AD8 /* ConfiguredTableView.m in Sources */,
 				64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */,
+				6458F3421C670E0500BB3968 /* FMDatabase.m in Sources */,
 				64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */,
 				64A462481C5C8B8B00189AD8 /* MonsterSettingViewController.m in Sources */,
+				6458F3491C670EF500BB3968 /* AlarmDBHelper.m in Sources */,
+				6458F3431C670E0500BB3968 /* FMDatabaseAdditions.m in Sources */,
 				6458F3331C67000400BB3968 /* SwitchFactory.m in Sources */,
+				6458F3441C670E0500BB3968 /* FMDatabasePool.m in Sources */,
 				6458F3301C66FB3E00BB3968 /* LabelFactory.m in Sources */,
+				6458F3451C670E0500BB3968 /* FMDatabaseQueue.m in Sources */,
 				64A462451C5C89A400189AD8 /* AlarmSettingViewController.m in Sources */,
 				64A462031C5C6BC400189AD8 /* main.m in Sources */,
 				64A462361C5C6C8000189AD8 /* FoundationViewController.m in Sources */,
+				6458F3461C670E0500BB3968 /* FMResultSet.m in Sources */,
 				64A4623C1C5C795300189AD8 /* OrgButton.m in Sources */,
 				64E7FF071C5E1A0200E5CC27 /* UserDefaultModel.m in Sources */,
 				64A462391C5C737700189AD8 /* HomeViewController.m in Sources */,

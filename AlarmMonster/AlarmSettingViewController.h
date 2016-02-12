@@ -10,7 +10,9 @@
 #import "ConfiguredTableView.h"
 #import "OrgButton.h"
 #import "UserDefaultModel.h"
+#import "AlarmDBHelper.h"
 
 @interface AlarmSettingViewController : FoundationViewController
+@property AlarmDBHelper *helper;
 
 @end

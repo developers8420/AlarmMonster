@@ -22,6 +22,8 @@
 
     self.view.backgroundColor = BACK_COLOR;
 
+    _helper = [[AlarmDBHelper alloc] init];
+    
     //ピッカー
     CGRect pickerRect = CGRectMake(self.defaultX, self.defaultY, self.defaultWidth, self.defaultHeight - 70);
     datePicker = [[UIDatePicker alloc] initWithFrame:pickerRect];
@@ -48,14 +50,18 @@
     NSString *result = [formatter stringFromDate:datePicker.date];
 
     NSMutableDictionary *alarmDic = [NSMutableDictionary dictionary];
-    [alarmDic setObject:result forKey:@"alarm"];
-    [alarmDic setObject:@"YES" forKey:@"repeat"];
-    [alarmDic setObject:@"1" forKey:@"flag"];
+    [alarmDic setObject:result forKey:@"ALARM"];
+    [alarmDic setObject:@"1" forKey:@"RUN_FLAG"];
+    [alarmDic setObject:@"1" forKey:@"REPEAT_FLAG"];
 
-    UserDefaultModel *model = [[UserDefaultModel alloc] init];
-    [model setAlarmSetting:alarmDic];
-
-    NSLog(@"%@",[model getAlarmSettingAry]);
+    BOOL ret = [_helper insert:alarmDic];
+    if(!ret) {
+        NSLog(@"%@",[_helper selectAll]);
+    }
+    
+    //UserDefaultModel *model = [[UserDefaultModel alloc] init];
+    //[model setAlarmSetting:alarmDic];
+    //NSLog(@"%@",[model getAlarmSettingAry]);
 }
 
 @end

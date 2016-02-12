@@ -10,7 +10,9 @@
 #import "UserDefaultModel.h"
 #import "LabelFactory.h"
 #import "SwitchFactory.h"
+#import "AlarmDBHelper.h"
 
 @interface ConfiguredTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
 @property UserDefaultModel *model;
+@property AlarmDBHelper *helper;
 @end
