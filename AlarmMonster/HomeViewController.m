@@ -23,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _model = [[UserDefaultModel alloc] init];
+    helper = [[AlarmDBHelper alloc] init];
+    model = [[AlarmModel alloc] init];
+    [model setAlarmArray:[helper selectAll]];
     self.view.backgroundColor = BACK_COLOR;
 
     //イメージを乗せるビュー
@@ -41,7 +43,7 @@
 
     //時間表示
     CGRect alarmLabelRect = CGRectMake(self.defaultX, self.defaultY + viewRect.size.height + 10, self.defaultWidth , 60);
-    alarmDispBtn = [OrgButton planeButton:alarmLabelRect text:[_model getAlarm:0] delegate:self action:@selector(moveConfigured) tag:3];
+    alarmDispBtn = [OrgButton planeButton:alarmLabelRect text:[model getFirstAlarm] delegate:self action:@selector(moveConfigured) tag:3];
     alarmDispBtn.backgroundColor = DEFAULT_COLOR;
     [self.view addSubview:alarmDispBtn];
 
@@ -79,8 +81,8 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    _model = [[UserDefaultModel alloc] init];
-    [alarmDispBtn setTitle:[_model getAlarm:0] forState:UIControlStateNormal];
+    [model setAlarmArray:[helper selectAll]];
+    [alarmDispBtn setTitle:[model getFirstAlarm] forState:UIControlStateNormal];
 }
 
 //アラーム設定画面に遷移

@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UserDefaultModel.h"
+#import "AlarmModel.h"
 #import "LabelFactory.h"
 #import "SwitchFactory.h"
 #import "AlarmDBHelper.h"
 
 @interface ConfiguredTableView : UITableView<UITableViewDataSource,UITableViewDelegate>
-@property UserDefaultModel *model;
+@property AlarmModel *model;
 @property AlarmDBHelper *helper;
 @end

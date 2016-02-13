@@ -34,6 +34,7 @@
 		64A462451C5C89A400189AD8 /* AlarmSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462441C5C89A400189AD8 /* AlarmSettingViewController.m */; };
 		64A462481C5C8B8B00189AD8 /* MonsterSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462471C5C8B8B00189AD8 /* MonsterSettingViewController.m */; };
 		64A4624E1C5C91A900189AD8 /* ConfiguredTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */; };
+		64C1FD031C6EEBE90099E1B1 /* AlarmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C1FD021C6EEBE90099E1B1 /* AlarmModel.m */; };
 		64E7FF071C5E1A0200E5CC27 /* UserDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,8 @@
 		64A462471C5C8B8B00189AD8 /* MonsterSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonsterSettingViewController.m; sourceTree = "<group>"; };
 		64A4624C1C5C91A900189AD8 /* ConfiguredTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredTableView.h; sourceTree = "<group>"; };
 		64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredTableView.m; sourceTree = "<group>"; };
+		64C1FD011C6EEBE90099E1B1 /* AlarmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmModel.h; sourceTree = "<group>"; };
+		64C1FD021C6EEBE90099E1B1 /* AlarmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmModel.m; sourceTree = "<group>"; };
 		64E7FF031C5E18E300E5CC27 /* AlarmMonsterDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlarmMonsterDefine.h; sourceTree = "<group>"; };
 		64E7FF051C5E1A0200E5CC27 /* UserDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultModel.h; sourceTree = "<group>"; };
 		64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultModel.m; sourceTree = "<group>"; };
@@ -270,6 +273,8 @@
 				64E7FF061C5E1A0200E5CC27 /* UserDefaultModel.m */,
 				6458F3471C670EF500BB3968 /* AlarmDBHelper.h */,
 				6458F3481C670EF500BB3968 /* AlarmDBHelper.m */,
+				64C1FD011C6EEBE90099E1B1 /* AlarmModel.h */,
+				64C1FD021C6EEBE90099E1B1 /* AlarmModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */,
 				6458F3421C670E0500BB3968 /* FMDatabase.m in Sources */,
 				64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */,
+				64C1FD031C6EEBE90099E1B1 /* AlarmModel.m in Sources */,
 				64A462481C5C8B8B00189AD8 /* MonsterSettingViewController.m in Sources */,
 				6458F3491C670EF500BB3968 /* AlarmDBHelper.m in Sources */,
 				6458F3431C670E0500BB3968 /* FMDatabaseAdditions.m in Sources */,

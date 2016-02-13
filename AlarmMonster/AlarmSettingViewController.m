@@ -12,8 +12,7 @@
 
 @end
 
-@implementation AlarmSettingViewController
-{
+@implementation AlarmSettingViewController {
     UIDatePicker *datePicker;
 }
 
@@ -23,7 +22,7 @@
     self.view.backgroundColor = BACK_COLOR;
 
     _helper = [[AlarmDBHelper alloc] init];
-    
+
     //ピッカー
     CGRect pickerRect = CGRectMake(self.defaultX, self.defaultY, self.defaultWidth, self.defaultHeight - 70);
     datePicker = [[UIDatePicker alloc] initWithFrame:pickerRect];
@@ -53,15 +52,20 @@
     [alarmDic setObject:result forKey:@"ALARM"];
     [alarmDic setObject:@"1" forKey:@"RUN_FLAG"];
     [alarmDic setObject:@"1" forKey:@"REPEAT_FLAG"];
-
     BOOL ret = [_helper insert:alarmDic];
-    if(!ret) {
-        NSLog(@"%@",[_helper selectAll]);
-    }
     
-    //UserDefaultModel *model = [[UserDefaultModel alloc] init];
-    //[model setAlarmSetting:alarmDic];
-    //NSLog(@"%@",[model getAlarmSettingAry]);
+    //INSERT成功したら
+    if(ret) {
+        [self.navigationController popViewControllerAnimated:YES];
+
+    //INSERT失敗したら
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"確認" message:@"すでに登録されています" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        }]];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 @end

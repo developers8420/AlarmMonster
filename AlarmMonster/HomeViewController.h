@@ -8,8 +8,11 @@
 
 #import "FoundationViewController.h"
 #import "OrgButton.h"
-#import "UserDefaultModel.h"
+#import "AlarmDBHelper.h"
+#import "AlarmModel.h"
 
-@interface HomeViewController : FoundationViewController
-@property UserDefaultModel *model;
+@interface HomeViewController : FoundationViewController {
+    AlarmDBHelper *helper;
+    AlarmModel *model;
+}
 @end

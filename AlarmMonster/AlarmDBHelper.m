@@ -9,7 +9,7 @@
 #import "AlarmDBHelper.h"
 
 @implementation AlarmDBHelper
-#define DB_PATH @"file.db"
+#define DB_PATH @"alarm.db"
 
 - (id) init {
     self = [super init];
@@ -21,16 +21,15 @@
 
 - (void) createDatabase {
     //DBファイルのパス
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
-    NSString *dir   = [paths objectAtIndex:0];
+    
+    NSString *dir = [self getDBDirectory];
     
     //DBファイルがあるかどうか確認
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    if (![fileManager fileExistsAtPath:[dir stringByAppendingPathComponent:DB_PATH]])
-    {
+    if (![fileManager fileExistsAtPath:[dir stringByAppendingPathComponent:DB_PATH]]) {
         //なければ新規作成
-        FMDatabase *db= [FMDatabase databaseWithPath:[dir stringByAppendingPathComponent:DB_PATH]];
-        NSString *sql = @"CREATE TABLE t_alarm (id INTEGER PRIMARY KEY AUTOINCREMENT,alarm TEXT, run_flag TEXT, repeat_flag TEXT);";
+        FMDatabase *db= [self getAlarmDatabase];
+        NSString *sql = @"CREATE TABLE T_ALARM (ID INTEGER PRIMARY KEY AUTOINCREMENT,ALARM TEXT UNIQUE, RUN_FLAG TEXT, REPEAT_FLAG TEXT);";
         
         [db open]; //DB開く
         [db executeUpdate:sql]; //SQL実行
@@ -39,11 +38,12 @@
 }
 
 - (NSMutableArray *) selectAll {
-    FMDatabase* db  = [FMDatabase databaseWithPath:DB_PATH];
+    
+    FMDatabase* db = [self getAlarmDatabase];
+    
     NSString *sql = @"SELECT * FROM t_alarm ORDER BY alarm ASC;";
     [db open];
     FMResultSet *results = [db executeQuery:sql];
-    [db close];
     
     NSMutableArray *resultAry = [NSMutableArray array];
     while ([results next]) {
@@ -56,13 +56,16 @@
         [resultAry addObject:dic];
     }
     
+    [db close];
+    
     return resultAry;
 }
 
 - (BOOL) insert : (NSMutableDictionary *) alarmDic {
-    FMDatabase* db  = [FMDatabase databaseWithPath:DB_PATH];
-    //NSString *sql = @"INSERT INTO t_alarm (alarm, run_flag, repeat_flag) VALUES (?,?,?);";
-    NSString *sql = @"INSERT INTO t_alarm VALUES (?,?,?)";
+    
+    FMDatabase* db = [self getAlarmDatabase];
+    
+    NSString *sql = @"INSERT INTO T_ALARM (ALARM, RUN_FLAG, REPEAT_FLAG) VALUES (?,?,?)";
     [db open];
     [db beginTransaction];
     
@@ -80,15 +83,61 @@
 }
 
 - (BOOL) update : (NSMutableDictionary *) alarmDic {
-    return YES;
+    FMDatabase* db = [self getAlarmDatabase];
+    
+    NSString *sql = @"UPDATE T_ALARM SET ALARM = ?, RUN_FLAG = ?, REPEAT_FLAG = ? WHERE ID = ?";
+    [db open];
+    [db beginTransaction];
+    
+    BOOL result = [db executeUpdate:sql,alarmDic[@"ALARM"],alarmDic[@"RUN_FLAG"],alarmDic[@"REPEAT_FLAG"],alarmDic[@"ID"]];
+    
+    if(result) {
+        [db commit];
+    } else {
+        [db rollback];
+    }
+    
+    [db close];
+    
+    return result;
 }
 
 - (BOOL) delete : (NSMutableDictionary *) alarmDic {
-    return YES;
+    FMDatabase* db = [self getAlarmDatabase];
+    
+    NSString *sql = @"DELETE FROM T_ALARM WHERE ID = ?";
+    [db open];
+    [db beginTransaction];
+    
+    BOOL result = [db executeUpdate:sql,alarmDic[@"ID"]];
+    
+    if(result) {
+        [db commit];
+    } else {
+        [db rollback];
+    }
+    
+    [db close];
+    
+    return result;
 }
 
 - (NSMutableDictionary *) select : (NSInteger) alarmId {
     return [NSMutableDictionary dictionary];
+}
+
+- (NSString *) getDBDirectory {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *dir = [paths objectAtIndex:0];
+    
+    return dir;
+}
+
+- (FMDatabase *) getAlarmDatabase {
+    NSString *writableDBPath = [[self getDBDirectory] stringByAppendingPathComponent:DB_PATH];
+    FMDatabase *db = [FMDatabase databaseWithPath:writableDBPath];
+    
+    return db;
 }
 
 @end

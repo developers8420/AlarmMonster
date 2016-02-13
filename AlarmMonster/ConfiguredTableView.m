@@ -9,6 +9,7 @@
 #import "ConfiguredTableView.h"
 
 @implementation ConfiguredTableView
+#define HIDDEN_COLOR [UIColor colorWithRed:0.808 green:0.859 blue:0.851 alpha:0.5];
 
 - (id) initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     
@@ -19,8 +20,9 @@
         self.delegate = self;
         self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.separatorInset = UIEdgeInsetsZero;
-        _model = [[UserDefaultModel alloc] init];
         _helper = [[AlarmDBHelper alloc] init];
+        _model = [[AlarmModel alloc] init];
+        [_model setAlarmArray:[_helper selectAll]];
         if ([self respondsToSelector:@selector(layoutMargins)]) {
             self.layoutMargins = UIEdgeInsetsZero;
         }
@@ -34,7 +36,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[_model getAlarmSettingAry] count];
+    return [[_model getAlarmArray] count];
 }
 
 -(UITableViewCell *)tableView: (UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -42,6 +44,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    for (UIView *subview in [cell.contentView subviews]) {
+        [subview removeFromSuperview];
     }
     
     CGRect cellRect = CGRectMake(0, 0, self.frame.size.width, 40);
@@ -57,14 +63,14 @@
                                      textAlignment:NSTextAlignmentCenter
                                    backgroundColor:[UIColor clearColor]];
     
-    
-    BOOL flag = ([[_model getFlag:indexPath.row] isEqualToString:@"1"]) ? YES : NO;
+    BOOL flag = ([[_model getRunFlag:indexPath.row] isEqualToString:@"1"]) ? YES : NO;
     CGRect flagRect = CGRectMake(self.frame.size.width-55, 5, 40, 30);
     UISwitch *flagSwitch = [SwitchFactory planeSwitch:flagRect
                                                    on:flag
                                              delegate:self
-                                               action:@selector(changeFlag:)
+                                               action:@selector(changeRunFlag:)
                                                   tag:indexPath.row];
+    cell.backgroundColor = (flag) ? [UIColor whiteColor] : HIDDEN_COLOR;
 
     [cellView addSubview:alarmLabel];
     [cellView addSubview:flagSwitch];
@@ -73,8 +79,32 @@
     return cell;
 }
 
-- (void) changeFlag :(UISwitch*)sw {
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @[[UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                                title:@"削除"
+                                              handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+                                                  [_helper delete:[_model getAlarmDic:indexPath.row]];
+                                                  [self reloadModelView];
+                                              }]];
+}
+
+- (void) changeRunFlag :(UISwitch*)sw {
+    NSString *flag = (sw.on) ? @"1" : @"0";
+    NSMutableDictionary *takeDic = [_model getAlarmDic:sw.tag];
+    [takeDic setObject:flag forKey:@"RUN_FLAG"];
     
+    [_helper update:takeDic];
+    [self reloadModelView];
+}
+
+- (void) reloadModelView {
+    [_model setAlarmArray:[_helper selectAll]];
+    [self reloadData];
+
 }
 
 @end
