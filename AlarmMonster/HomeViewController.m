@@ -77,7 +77,7 @@
 
     //バーボタンの設定
     self.navigationItem.rightBarButtonItem = alarmBarBtn;
-    self.navigationItem.leftBarButtonItem = monsterBarBtn;
+    //self.navigationItem.leftBarButtonItem = monsterBarBtn;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
