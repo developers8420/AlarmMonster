@@ -41,14 +41,43 @@
     return retRepeatFlag;
 }
 - (NSString *) getFirstAlarm {
-    NSString *retAlarm = [NSString string];
     for (NSDictionary *dic in alarmArray) {
         if([dic[@"RUN_FLAG"] isEqualToString:@"1"]) {
-            retAlarm = dic[@"ALARM"];
+            NSString *retAlarm = dic[@"ALARM"];
             return retAlarm;
         }
     }
     return NO_ALARM_MESSAGE;
+}
+- (void) setAlarmNotification {
+    
+    UIApplication* app = [UIApplication sharedApplication];
+    NSArray* oldNotifications = [app scheduledLocalNotifications];
+    // 新しい通知を予約する前に古い通知を削除。
+    if ([oldNotifications count] > 0)
+        [app cancelAllLocalNotifications];
+    
+    //formaterを作成
+    DateConvert *converter = [[DateConvert alloc] init];
+    for (NSDictionary *alarmDic in alarmArray) {
+        if([alarmDic[@"RUN_FLAG"] isEqualToString:@"1"]) {
+            
+            UILocalNotification* alarm = [[UILocalNotification alloc] init];
+            //アラームを鳴らす日付
+            alarm.fireDate = [converter getFormatDate:alarmDic[@"ALARM"]];
+            //現在地のタイムゾーン設定(おそらく日本に変えた方がいい)
+            alarm.timeZone = [NSTimeZone defaultTimeZone];
+            //リピート回数(設定するならリピートできる仕組みを作る必要あり)
+            alarm.repeatInterval = 0;
+            //鳴らす音楽ファイル名しょう
+            alarm.soundName = @"alarm.mp3";
+            //バックグラウンド時に表示するメッセージ
+            alarm.alertBody = [NSString stringWithFormat:@"%@になりました！起きましょう！",alarmDic[@"ALARM"]];
+            //アラート情報
+            alarm.userInfo = alarmDic;
+            [app scheduleLocalNotification:alarm];
+        }
+    }
 }
 
 @end

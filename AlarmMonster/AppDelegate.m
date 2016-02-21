@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UIUserNotificationSettings *notificationSettings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeSound)
+                                                                                         categories:nil];
+    [[UIApplication sharedApplication]registerUserNotificationSettings:notificationSettings];
     return YES;
 }
 
@@ -42,4 +45,38 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // アプリ起動中(フォアグラウンド)に通知が届いた場合
+    if(application.applicationState == UIApplicationStateActive) {
+        
+        //起動中は通知がこないため処理が必要
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"アラーム"
+                                                                                 message:[NSString stringWithFormat:@"%@になりました！起きましょう！",notification.userInfo[@"ALARM"]]
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        }]];
+        
+        UIViewController *baseView = [UIApplication sharedApplication].keyWindow.rootViewController;
+        while (baseView.presentedViewController != nil && !baseView.presentedViewController.isBeingDismissed) {
+            baseView = baseView.presentedViewController;
+        }
+        [baseView presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    // アプリがバックグラウンドにある状態で通知が届いた場合
+    if(application.applicationState == UIApplicationStateInactive) {
+        
+    }
+    
+    // 通知領域から対象のアラート設定だけ削除する
+    [[UIApplication sharedApplication] cancelLocalNotification:notification];
+    
+    //アラート設定をオフにする
+    AlarmDBHelper *helper = [[AlarmDBHelper alloc] init];
+    AlarmModel *model = [[AlarmModel alloc] init];
+    NSMutableDictionary *targetAlarmDic = [notification.userInfo mutableCopy];
+    [targetAlarmDic setObject:@"0" forKey:@"RUN_FLAG"];
+    [helper update:targetAlarmDic];
+    [model setAlarmNotification];
+}
 @end

@@ -18,7 +18,7 @@
 
 #define ALARM_IMG @"めざまし時計アイコン.png"
 #define MONSTER_IMG @"設定アイコン.png"
-#define WATAAME_IMG @"わたあめ1.png"
+#define WATAAME_IMG @"おにぎりさん.png"
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "DateConvert.h"
 
 @interface AlarmModel : NSObject {
     NSMutableArray *alarmArray;
@@ -20,5 +22,6 @@
 - (NSString *) getRunFlag : (NSInteger) indexRow;
 - (NSString *) getRepeatFlag : (NSInteger) indexRow;
 - (NSString *) getFirstAlarm;
+- (void) setAlarmNotification;
 
 @end

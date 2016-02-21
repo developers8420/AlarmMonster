@@ -98,13 +98,13 @@
     [takeDic setObject:flag forKey:@"RUN_FLAG"];
     
     [_helper update:takeDic];
+    [_model setAlarmNotification];
     [self reloadModelView];
 }
 
 - (void) reloadModelView {
     [_model setAlarmArray:[_helper selectAll]];
     [self reloadData];
-
 }
 
 @end

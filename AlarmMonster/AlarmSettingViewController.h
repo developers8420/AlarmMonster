@@ -11,6 +11,7 @@
 #import "OrgButton.h"
 #import "UserDefaultModel.h"
 #import "AlarmDBHelper.h"
+#import "AlarmModel.h"
 
 @interface AlarmSettingViewController : FoundationViewController
 @property AlarmDBHelper *helper;

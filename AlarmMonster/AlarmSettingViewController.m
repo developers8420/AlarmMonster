@@ -56,6 +56,9 @@
     
     //INSERT成功したら
     if(ret) {
+        AlarmModel *model = [[AlarmModel alloc] init];
+        [model setAlarmArray:[_helper selectAll]];
+        [model setAlarmNotification];
         [self.navigationController popViewControllerAnimated:YES];
 
     //INSERT失敗したら

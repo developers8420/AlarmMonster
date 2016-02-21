@@ -17,6 +17,9 @@
 		6458F3491C670EF500BB3968 /* AlarmDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3481C670EF500BB3968 /* AlarmDBHelper.m */; };
 		6458F34E1C671F4D00BB3968 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		6458F3501C6720C900BB3968 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */; };
+		647279BF1C775994003D37DF /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 647279BE1C775994003D37DF /* alarm.mp3 */; };
+		647279C21C78515F003D37DF /* DateConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 647279C11C78515F003D37DF /* DateConvert.m */; };
+		647C2FF11C6F0785005678F5 /* おにぎりさん.png in Resources */ = {isa = PBXBuildFile; fileRef = 647C2FF01C6F0785005678F5 /* おにぎりさん.png */; };
 		64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */; };
 		64A462031C5C6BC400189AD8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462021C5C6BC400189AD8 /* main.m */; };
 		64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A462051C5C6BC400189AD8 /* AppDelegate.m */; };
@@ -74,6 +77,10 @@
 		6458F3481C670EF500BB3968 /* AlarmDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDBHelper.m; sourceTree = "<group>"; };
 		6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		647279BE1C775994003D37DF /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
+		647279C01C78515F003D37DF /* DateConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConvert.h; sourceTree = "<group>"; };
+		647279C11C78515F003D37DF /* DateConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConvert.m; sourceTree = "<group>"; };
+		647C2FF01C6F0785005678F5 /* おにぎりさん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "おにぎりさん.png"; sourceTree = "<group>"; };
 		64A244C31C5C98B0001C85DF /* ConfiguredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguredViewController.h; sourceTree = "<group>"; };
 		64A244C41C5C98B0001C85DF /* ConfiguredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguredViewController.m; sourceTree = "<group>"; };
 		64A461FE1C5C6BC400189AD8 /* AlarmMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarmMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +208,8 @@
 		64A462011C5C6BC400189AD8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				647279BE1C775994003D37DF /* alarm.mp3 */,
+				647C2FF01C6F0785005678F5 /* おにぎりさん.png */,
 				64A4623F1C5C867D00189AD8 /* めざまし時計アイコン.png */,
 				64A462401C5C867D00189AD8 /* 設定アイコン.png */,
 				64A4623D1C5C7CC600189AD8 /* わたあめ1.png */,
@@ -262,6 +271,8 @@
 			children = (
 				64A4624C1C5C91A900189AD8 /* ConfiguredTableView.h */,
 				64A4624D1C5C91A900189AD8 /* ConfiguredTableView.m */,
+				647279C01C78515F003D37DF /* DateConvert.h */,
+				647279C11C78515F003D37DF /* DateConvert.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -387,8 +398,10 @@
 				64A462111C5C6BC400189AD8 /* LaunchScreen.storyboard in Resources */,
 				64A462421C5C867D00189AD8 /* 設定アイコン.png in Resources */,
 				64A4620E1C5C6BC400189AD8 /* Assets.xcassets in Resources */,
+				647279BF1C775994003D37DF /* alarm.mp3 in Resources */,
 				64A4623E1C5C7CC600189AD8 /* わたあめ1.png in Resources */,
 				64A4620C1C5C6BC400189AD8 /* Main.storyboard in Resources */,
+				647C2FF11C6F0785005678F5 /* おにぎりさん.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +437,7 @@
 				6458F3331C67000400BB3968 /* SwitchFactory.m in Sources */,
 				6458F3441C670E0500BB3968 /* FMDatabasePool.m in Sources */,
 				6458F3301C66FB3E00BB3968 /* LabelFactory.m in Sources */,
+				647279C21C78515F003D37DF /* DateConvert.m in Sources */,
 				6458F3451C670E0500BB3968 /* FMDatabaseQueue.m in Sources */,
 				64A462451C5C89A400189AD8 /* AlarmSettingViewController.m in Sources */,
 				64A462031C5C6BC400189AD8 /* main.m in Sources */,
