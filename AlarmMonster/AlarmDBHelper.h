@@ -11,6 +11,7 @@
 
 @interface AlarmDBHelper : NSObject
 - (NSMutableArray *) selectAll;
+- (NSMutableArray *) selectRunAlarms;
 - (BOOL) insert : (NSMutableDictionary *) alarmDic;
 - (BOOL) update : (NSMutableDictionary *) alarmDic;
 - (BOOL) delete : (NSMutableDictionary *) alarmDic;

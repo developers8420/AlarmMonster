@@ -61,6 +61,30 @@
     return resultAry;
 }
 
+- (NSMutableArray *) selectRunAlarms {
+    
+    FMDatabase* db = [self getAlarmDatabase];
+    
+    NSString *sql = @"SELECT * FROM t_alarm WHERE RUN_FLAG = '1' ORDER BY alarm ASC;";
+    [db open];
+    FMResultSet *results = [db executeQuery:sql];
+    
+    NSMutableArray *resultAry = [NSMutableArray array];
+    while ([results next]) {
+        NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+        [dic setObject:[results stringForColumn:@"id"] forKey:@"ID"];
+        [dic setObject:[results stringForColumn:@"alarm"] forKey:@"ALARM"];
+        [dic setObject:[results stringForColumn:@"run_flag"] forKey:@"RUN_FLAG"];
+        [dic setObject:[results stringForColumn:@"repeat_flag"] forKey:@"REPEAT_FLAG"];
+        
+        [resultAry addObject:dic];
+    }
+    
+    [db close];
+    
+    return resultAry;
+}
+
 - (BOOL) insert : (NSMutableDictionary *) alarmDic {
     
     FMDatabase* db = [self getAlarmDatabase];

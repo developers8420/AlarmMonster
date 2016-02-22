@@ -25,7 +25,7 @@
 
     helper = [[AlarmDBHelper alloc] init];
     model = [[AlarmModel alloc] init];
-    [model setAlarmArray:[helper selectAll]];
+    [model setAlarmArray:[helper selectRunAlarms]];
     self.view.backgroundColor = BACK_COLOR;
 
     //イメージを乗せるビュー
@@ -81,7 +81,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    [model setAlarmArray:[helper selectAll]];
+    [model setAlarmArray:[helper selectRunAlarms]];
     [alarmDispBtn setTitle:[model getFirstAlarm] forState:UIControlStateNormal];
 }
 

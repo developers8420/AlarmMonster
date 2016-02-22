@@ -79,4 +79,16 @@
     return compleDate;
 }
 
+
+//今日の日付か
+- (BOOL) isNowDate:(NSDate *)compareDate {
+    NSString *nowDateStr = [nowDateFormat stringFromDate:[NSDate date]];
+    NSString *compareDateStr = [nowDateFormat stringFromDate:compareDate];
+    
+    if([nowDateStr isEqualToString:compareDateStr]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 @end

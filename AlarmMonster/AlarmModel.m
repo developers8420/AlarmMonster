@@ -41,13 +41,17 @@
     return retRepeatFlag;
 }
 - (NSString *) getFirstAlarm {
+    
+    if([alarmArray count] == 0) { return NO_ALARM_MESSAGE; }
+    
+    DateConvert *converter = [[DateConvert alloc] init];
     for (NSDictionary *dic in alarmArray) {
-        if([dic[@"RUN_FLAG"] isEqualToString:@"1"]) {
-            NSString *retAlarm = dic[@"ALARM"];
-            return retAlarm;
+        if([converter isNowDate:[converter getFormatDate:dic[@"ALARM"]]]) {
+            return dic[@"ALARM"];
         }
     }
-    return NO_ALARM_MESSAGE;
+    
+    return alarmArray[0][@"ALARM"];
 }
 - (void) setAlarmNotification {
     

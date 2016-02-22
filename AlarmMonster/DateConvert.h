@@ -18,4 +18,6 @@
 - (NSDate *) getFormatDate : (NSString *) alarmDateStr;
 //今日の時間か
 - (BOOL) isTodaysTime : (NSDate *) orgDate;
+//今日の日付か
+- (BOOL) isNowDate : (NSDate *) compareDate;
 @end
