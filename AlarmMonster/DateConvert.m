@@ -91,4 +91,11 @@
         return NO;
     }
 }
+
+//次の秒数を取得(0,15,30,45)
+- (NSDate *) getNextSecondsDate:(NSDate *)orgDate repeatIndex:(int)repeatIndex {
+    NSDate *nextSecondDate = [orgDate initWithTimeInterval:(repeatIndex * 15) sinceDate:orgDate];
+    NSLog(@"%@",[interimFormat stringFromDate:nextSecondDate]);
+    return nextSecondDate;
+}
 @end

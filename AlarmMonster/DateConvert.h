@@ -20,4 +20,6 @@
 - (BOOL) isTodaysTime : (NSDate *) orgDate;
 //今日の日付か
 - (BOOL) isNowDate : (NSDate *) compareDate;
+//次の秒数を取得(0,15,30,45)
+- (NSDate *) getNextSecondsDate : (NSDate *) orgDate repeatIndex : (int) repeatIndex;
 @end

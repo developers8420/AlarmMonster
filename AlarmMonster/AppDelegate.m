@@ -69,7 +69,15 @@
     }
     
     // 通知領域から対象のアラート設定だけ削除する
-    [[UIApplication sharedApplication] cancelLocalNotification:notification];
+    //[[UIApplication sharedApplication] cancelLocalNotification:notification];
+    
+    for(UILocalNotification *allNotification in [[UIApplication sharedApplication] scheduledLocalNotifications]) {
+        // 通知に登録されているキーで検索
+        if([allNotification.userInfo[@"ID"] isEqualToString:notification.userInfo[@"ID"]]) {
+            // キーが一致したら、対象の通知を削除
+            [[UIApplication sharedApplication] cancelLocalNotification:notification];
+        }
+    }
     
     //アラート設定をオフにする
     AlarmDBHelper *helper = [[AlarmDBHelper alloc] init];

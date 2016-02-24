@@ -52,7 +52,7 @@
 
     //イメージの設定
     UIImage *alarmSettingImg = [UIImage imageNamed:ALARM_IMG];
-    UIImage *monsterSettingImg = [UIImage imageNamed:MONSTER_IMG];
+    //UIImage *monsterSettingImg = [UIImage imageNamed:MONSTER_IMG];
 
     //ボタンの作成
     UIButton *alarmBtn = [OrgButton imageButton:imgRect
@@ -62,7 +62,7 @@
                                             delegate:self
                                             action:@selector(moveAlarmSetting)
                                             tag:1];
-
+    /*モンスターの設定がなくなったためコメントアウト
     UIButton *monsterBtn = [OrgButton imageButton:imgRect
                                               img:monsterSettingImg
                                      isHighlighte:YES
@@ -70,17 +70,29 @@
                                          delegate:self
                                            action:@selector(moveMonsterSetting)
                                               tag:2];
+     */
 
     //バーボタンの作成
     UIBarButtonItem *alarmBarBtn = [[UIBarButtonItem alloc] initWithCustomView:alarmBtn];
-    UIBarButtonItem *monsterBarBtn = [[UIBarButtonItem alloc] initWithCustomView:monsterBtn];
+    //UIBarButtonItem *monsterBarBtn = [[UIBarButtonItem alloc] initWithCustomView:monsterBtn];
 
     //バーボタンの設定
     self.navigationItem.rightBarButtonItem = alarmBarBtn;
-    //self.navigationItem.leftBarButtonItem = monsterBarBtn;
+
+    //バックグラウンドから戻ってきた時にstartBeforeProcessが呼び出されるように設定
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(startBeforeProcess)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
 }
 
+//画面が呼び出される直前
 - (void) viewWillAppear:(BOOL)animated {
+    [self startBeforeProcess];
+}
+
+//表示するアラームを最新にする(画面が表示される直前と通知をタップした時に呼び出される)
+- (void) startBeforeProcess {
     [model setAlarmArray:[helper selectRunAlarms]];
     [alarmDispBtn setTitle:[model getFirstAlarm] forState:UIControlStateNormal];
 }

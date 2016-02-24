@@ -10,6 +10,7 @@
 
 @implementation AlarmModel
 #define NO_ALARM_MESSAGE @"未設定"
+#define REPEAT_INDEX 4
 
 - (void) setAlarmArray:(NSMutableArray *)ary {
     alarmArray = ([ary count] > 0) ? [ary mutableCopy]: [NSMutableArray array];
@@ -65,21 +66,22 @@
     DateConvert *converter = [[DateConvert alloc] init];
     for (NSDictionary *alarmDic in alarmArray) {
         if([alarmDic[@"RUN_FLAG"] isEqualToString:@"1"]) {
-            
-            UILocalNotification* alarm = [[UILocalNotification alloc] init];
-            //アラームを鳴らす日付
-            alarm.fireDate = [converter getFormatDate:alarmDic[@"ALARM"]];
-            //現在地のタイムゾーン設定(おそらく日本に変えた方がいい)
-            alarm.timeZone = [NSTimeZone defaultTimeZone];
-            //リピート回数(設定するならリピートできる仕組みを作る必要あり)
-            alarm.repeatInterval = 0;
-            //鳴らす音楽ファイル名しょう
-            alarm.soundName = @"alarm.mp3";
-            //バックグラウンド時に表示するメッセージ
-            alarm.alertBody = [NSString stringWithFormat:@"%@になりました！起きましょう！",alarmDic[@"ALARM"]];
-            //アラート情報
-            alarm.userInfo = alarmDic;
-            [app scheduleLocalNotification:alarm];
+            for (int index=0; index < REPEAT_INDEX; index++) {
+                UILocalNotification* alarm = [[UILocalNotification alloc] init];
+                //アラームを鳴らす日付
+                alarm.fireDate = [converter getNextSecondsDate:[converter getFormatDate:alarmDic[@"ALARM"]]  repeatIndex:index] ;
+                //現在地のタイムゾーン設定(おそらく日本に変えた方がいい)
+                alarm.timeZone = [NSTimeZone defaultTimeZone];
+                //リピート回数(設定するならリピートできる仕組みを作る必要あり)
+                alarm.repeatInterval = 0;
+                //鳴らす音楽ファイル名しょう
+                alarm.soundName = @"alarm.mp3";
+                //バックグラウンド時に表示するメッセージ
+                alarm.alertBody = [NSString stringWithFormat:@"%@になりました！起きましょう！",alarmDic[@"ALARM"]];
+                //アラート情報
+                alarm.userInfo = alarmDic;
+                [app scheduleLocalNotification:alarm];
+            }
         }
     }
 }
