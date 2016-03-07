@@ -17,6 +17,8 @@
 		6458F3491C670EF500BB3968 /* AlarmDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6458F3481C670EF500BB3968 /* AlarmDBHelper.m */; };
 		6458F34E1C671F4D00BB3968 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		6458F3501C6720C900BB3968 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */; };
+		646F66591C8DC84000323B86 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646F66581C8DC84000323B86 /* AVFoundation.framework */; };
+		646F665D1C8DC8CE00323B86 /* AVManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 646F665C1C8DC8CE00323B86 /* AVManager.m */; };
 		647279BF1C775994003D37DF /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 647279BE1C775994003D37DF /* alarm.mp3 */; };
 		647279C21C78515F003D37DF /* DateConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 647279C11C78515F003D37DF /* DateConvert.m */; };
 		647C2FF11C6F0785005678F5 /* おにぎりさん.png in Resources */ = {isa = PBXBuildFile; fileRef = 647C2FF01C6F0785005678F5 /* おにぎりさん.png */; };
@@ -77,6 +79,9 @@
 		6458F3481C670EF500BB3968 /* AlarmDBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmDBHelper.m; sourceTree = "<group>"; };
 		6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		646F66581C8DC84000323B86 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		646F665B1C8DC8CE00323B86 /* AVManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVManager.h; sourceTree = "<group>"; };
+		646F665C1C8DC8CE00323B86 /* AVManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVManager.m; sourceTree = "<group>"; };
 		647279BE1C775994003D37DF /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		647279C01C78515F003D37DF /* DateConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConvert.h; sourceTree = "<group>"; };
 		647279C11C78515F003D37DF /* DateConvert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConvert.m; sourceTree = "<group>"; };
@@ -124,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646F66591C8DC84000323B86 /* AVFoundation.framework in Frameworks */,
 				6458F3501C6720C900BB3968 /* libsqlite3.0.tbd in Frameworks */,
 				6458F34E1C671F4D00BB3968 /* libsqlite3.dylib in Frameworks */,
 			);
@@ -163,9 +169,19 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		646F665A1C8DC8B300323B86 /* AV */ = {
+			isa = PBXGroup;
+			children = (
+				646F665B1C8DC8CE00323B86 /* AVManager.h */,
+				646F665C1C8DC8CE00323B86 /* AVManager.m */,
+			);
+			name = AV;
+			sourceTree = "<group>";
+		};
 		64A461F51C5C6BC400189AD8 = {
 			isa = PBXGroup;
 			children = (
+				646F66581C8DC84000323B86 /* AVFoundation.framework */,
 				6458F34F1C6720C900BB3968 /* libsqlite3.0.tbd */,
 				6458F34C1C671F1D00BB3968 /* libsqlite3.dylib */,
 				64A462001C5C6BC400189AD8 /* AlarmMonster */,
@@ -191,6 +207,7 @@
 				64A462041C5C6BC400189AD8 /* AppDelegate.h */,
 				64A462051C5C6BC400189AD8 /* AppDelegate.m */,
 				64E7FF031C5E18E300E5CC27 /* AlarmMonsterDefine.h */,
+				646F665A1C8DC8B300323B86 /* AV */,
 				6458F3361C670DC300BB3968 /* FMDB */,
 				64A4624A1C5C8BB700189AD8 /* UIparts */,
 				64E7FF041C5E19E800E5CC27 /* Model */,
@@ -428,6 +445,7 @@
 			files = (
 				64A4624E1C5C91A900189AD8 /* ConfiguredTableView.m in Sources */,
 				64A244C51C5C98B0001C85DF /* ConfiguredViewController.m in Sources */,
+				646F665D1C8DC8CE00323B86 /* AVManager.m in Sources */,
 				6458F3421C670E0500BB3968 /* FMDatabase.m in Sources */,
 				64A462061C5C6BC400189AD8 /* AppDelegate.m in Sources */,
 				64C1FD031C6EEBE90099E1B1 /* AlarmModel.m in Sources */,

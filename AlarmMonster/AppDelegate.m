@@ -48,12 +48,13 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     // アプリ起動中(フォアグラウンド)に通知が届いた場合
     if(application.applicationState == UIApplicationStateActive) {
-        
+        [[AVManager sharedManager] playSound:@"alarm.mp3"];
         //起動中は通知がこないため処理が必要
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"アラーム"
                                                                                  message:[NSString stringWithFormat:@"%@になりました！起きましょう！",notification.userInfo[@"ALARM"]]
                                                                           preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"はい" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [[AVManager sharedManager] stopSound];
         }]];
         
         UIViewController *baseView = [UIApplication sharedApplication].keyWindow.rootViewController;
