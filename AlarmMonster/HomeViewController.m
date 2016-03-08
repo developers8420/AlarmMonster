@@ -62,15 +62,6 @@
                                             delegate:self
                                             action:@selector(moveAlarmSetting)
                                             tag:1];
-    /*モンスターの設定がなくなったためコメントアウト
-    UIButton *monsterBtn = [OrgButton imageButton:imgRect
-                                              img:monsterSettingImg
-                                     isHighlighte:YES
-                                           on_img:monsterSettingImg
-                                         delegate:self
-                                           action:@selector(moveMonsterSetting)
-                                              tag:2];
-     */
 
     //バーボタンの作成
     UIBarButtonItem *alarmBarBtn = [[UIBarButtonItem alloc] initWithCustomView:alarmBtn];
@@ -99,13 +90,11 @@
 
 //アラーム設定画面に遷移
 - (void) moveAlarmSetting {
-    NSLog(@"アラーム設定に移動！");
      [self performSegueWithIdentifier:@"AlarmSettingSegue" sender:self];
 }
 
 //モンスター設定画面に遷移
 - (void) moveMonsterSetting {
-    NSLog(@"モンスター設定に移動！");
     [self performSegueWithIdentifier:@"MonsterSettingSegue" sender:self];
 }
 
